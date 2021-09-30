@@ -10,17 +10,17 @@ namespace Model.Model
 {
     public class PollingPointSet
     {
-        public List<DataPointPLC> dataPoints { get; set; }
+        public List<DataItemPLC> dataPoints { get; set; }
 
         public PollingPointSet()
         {
-            dataPoints = new List<DataPointPLC>();
+            dataPoints = new List<DataItemPLC>();
         }
         
 
 
 
-        public void AddPoint(DataPointPLC dataPoint)
+        public void AddPoint(DataItemPLC dataPoint)
         {
             dataPoints.Add(dataPoint);
 
@@ -42,12 +42,12 @@ namespace Model.Model
         /// </summary>
         /// <param name="path">путь к файлу</param>
         /// <returns></returns>
-        public static List<DataPointPLC> JsonDeserialize(string path)
+        public static List<DataItemPLC> JsonDeserialize(string path)
         {
-            List<DataPointPLC> dataPoints = new List<DataPointPLC>();
+            List<DataItemPLC> dataPoints = new List<DataItemPLC>();
 
             string json = File.ReadAllText(path);
-            dataPoints = JsonConvert.DeserializeObject<List<DataPointPLC>>(json);
+            dataPoints = JsonConvert.DeserializeObject<List<DataItemPLC>>(json);
 
             return dataPoints;
         }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Model.Model
 {
-    public class DataPointPLC : Plc
+    public class DataItemPLC 
     {
         public string Name { get; set; }
         public string Text { get; set; }
@@ -20,12 +20,12 @@ namespace Model.Model
         public VarType VarTypePLC { get; set; }
         
 
-        public DataPointPLC()
+        public DataItemPLC()
         {
         
         }
 
-        public DataPointPLC(string name, string text, CpuType cpuType, string ipAdress, short rack, short slot, DataType dataType, VarType varTypePLC)
+        public DataItemPLC(string name, string text, CpuType cpuType, string ipAdress, short rack, short slot, DataType dataType, VarType varTypePLC)
         {
             Name = name;
             Text = text;
