@@ -7,15 +7,15 @@ namespace SiemTeleBot
     {
         static void Main(string[] args)
         {
-            PollingPointSet plcDataPool = new();
+            DescriptionList plcDataPool = new();
             //Для создания файла раскоментируйте две нижние строки, десирилизацию закоментируйте
             // серилизация
-            //plcDataPool.AddPoint(new DataItemPLC("temp1", "Температура", S7.Net.CpuType.S71200, "192.168.3.101", 0, 0, S7.Net.DataType.DataBlock, S7.Net.VarType.Real));
+            //plcDataPool.AddPoint(new DataItemModel("temp1", "Температура", S7.Net.CpuType.S71200, "192.168.3.101", 0, 0, S7.Net.DataType.DataBlock, S7.Net.VarType.Real));
             //plcDataPool.JsonSerialize("123");
 
 
             //десерилизация
-            plcDataPool.dataPoints = PollingPointSet.JsonDeserialize("123");
+            plcDataPool.dataPoints = DescriptionList.JsonDeserialize("123");
 
 
 
