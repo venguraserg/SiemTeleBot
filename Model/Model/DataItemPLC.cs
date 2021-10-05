@@ -53,10 +53,10 @@ namespace Model.Model
             //return (double)result;
 
         }
-        public override string ToString()
-        {
-            return $"{Name} {Text}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"{Name} {Text}";
+        //}
 
     }
 }

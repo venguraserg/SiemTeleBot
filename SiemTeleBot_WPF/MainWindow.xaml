@@ -9,7 +9,23 @@
     <Grid Margin="0,0,0,0">
 
         <Button Content="Button" HorizontalAlignment="Left" Margin="493,75,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <ListBox x:Name="ListDbView" HorizontalAlignment="Left" Height="329" Margin="35,0,0,0" VerticalAlignment="Center" Width="401"/>
+        <ListBox x:Name="ListDbView" 
+                 HorizontalAlignment="Left" 
+                 Height="329" Margin="35,0,0,0" 
+                 VerticalAlignment="Center" Width="401">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text ="{Binding Name}"/>
+
+
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+                
+            
+
+        </ListBox>
 
 
     </Grid>
