@@ -1,5 +1,4 @@
-﻿using Model.Model;
-using System;
+﻿using System;
 
 namespace SiemTeleBot
 {
@@ -17,7 +16,7 @@ namespace SiemTeleBot
             //десерилизация
             plcDataPool.dataPoints = DescriptionList.JsonDeserialize("123");
 
-            var ddd=InitDataItem.GetDataPLC(plcDataPool);
+            var ddd = InitDataItem.GetDataPLC(plcDataPool);
 
 
 
