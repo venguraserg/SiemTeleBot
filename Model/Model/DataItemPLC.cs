@@ -11,7 +11,11 @@ namespace Model.Model
     {
         public string Name { get; set; }
         public string Text { get; set; }
-        public Plc Plc { get; set; }        
+        public Plc Plc { get; set; }
+
+        public int Db { get; set; }
+        public int StartByteAdr { get; set; }
+
         public DataType DataType { get; set; }
         public VarType VarTypePLC { get; set; }
         
@@ -21,12 +25,15 @@ namespace Model.Model
         
         }
 
-        public DataItemPLC(string name, string text, CpuType cpuType, string ipAdress, short rack, short slot, DataType dataType, VarType varTypePLC)
+        public DataItemPLC(string name, string text, CpuType cpuType, string ipAdress, short rack, short slot, int db, int startByteAdress, DataType dataType, VarType varTypePLC)
         {
             Name = name;
             Text = text;
             Plc = new Plc(cpuType, ipAdress, rack, slot);
-                       
+
+            Db = db;
+            StartByteAdr = startByteAdress;
+
             DataType = dataType;
             VarTypePLC = varTypePLC;
         }
@@ -46,6 +53,10 @@ namespace Model.Model
             //return (double)result;
 
         }
-    
+        public override string ToString()
+        {
+            return $"{Name} {Text}";
+        }
+
     }
 }

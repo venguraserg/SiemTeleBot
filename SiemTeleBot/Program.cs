@@ -1,5 +1,7 @@
 ﻿using Model.Model;
 using System;
+using System.Collections.Generic;
+using S7.Net;
 
 namespace SiemTeleBot
 {
@@ -7,19 +9,28 @@ namespace SiemTeleBot
     {
         static void Main(string[] args)
         {
-            DescriptionList plcDataPool = new();
+            string path = "123";
+
+
+
             //Для создания файла раскоментируйте две нижние строки, десирилизацию закоментируйте
             // серилизация
-            //plcDataPool.AddPoint(new DataItemModel("temp1", "Температура", S7.Net.CpuType.S71200, "192.168.3.101", 0, 0, S7.Net.DataType.DataBlock, S7.Net.VarType.Real));
-            //plcDataPool.JsonSerialize("123");
+            //var test = new DescriptionDataItem("Temp1", "Temp Paster", CpuType.S71200, "192.168.3.101",9,40, 0, 0, DataType.DataBlock, VarType.Real);
+            //var test2 = new List<DescriptionDataItem>();
+            //test2.Add(test);
+
+
+            //LoadSaveDataItemPLC.SaveDataItemPLC(path, test2);
+
+
 
 
             //десерилизация
-            plcDataPool.dataPoints = DescriptionList.JsonDeserialize("123");
+            //
+            //List<DataItemPLC> poolDataItemPLC = LoadSaveDataItemPLC.LoadDataItemPLC(path);
 
 
 
-            
             Console.WriteLine("------");
             Console.ReadKey();
         }
