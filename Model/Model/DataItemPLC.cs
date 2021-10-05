@@ -37,6 +37,7 @@ namespace Model.Model
             {
                 plc.Open();
                // var result = (float)plc.Read(DataType, data.Db, data.Adr, VarType.Real, 1);
+
                 plc.Close();
 
             }
