@@ -18,11 +18,6 @@ namespace Model.Model
                 dataItemsPLC.Add(new DataItemPLC(dataItem.dataPoints[i].Name, dataItem.dataPoints[i].Text, dataItem.dataPoints[i].CpuType, dataItem.dataPoints[i].IpAdress, dataItem.dataPoints[i].Rack, dataItem.dataPoints[i].Slot, dataItem.dataPoints[i].DataType, dataItem.dataPoints[i].VarTypePLC));
             }
 
-            string[] messageMasive = new string[dataItemsPLC.Count];
-            for (int i = 0; i < dataItemsPLC.Count; i++)
-            {
-                messageMasive[i] = dataItemsPLC[i].ReadDataPoint();
-            }
 
 
             string[] dd = Array.Empty<string>();

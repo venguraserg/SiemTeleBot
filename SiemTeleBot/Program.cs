@@ -17,10 +17,9 @@ namespace SiemTeleBot
             //десерилизация
             plcDataPool.dataPoints = DescriptionList.JsonDeserialize("123");
 
-            var ddd=InitDataItem.GetDataPLC(plcDataPool);
 
 
-
+            
             Console.WriteLine("------");
             Console.ReadKey();
         }
