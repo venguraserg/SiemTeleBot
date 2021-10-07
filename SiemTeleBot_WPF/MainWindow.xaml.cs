@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using S7.Net;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace SiemTeleBot_WPF
 {
@@ -24,21 +25,29 @@ namespace SiemTeleBot_WPF
     public partial class MainWindow : Window
     {
         ObservableCollection<DataItemPLC> poolDataItemPLC = LoadSaveDataItemPLC.LoadDataItemPLC("123");
+        Array f;
         
+
         public MainWindow()
         {
             InitializeComponent();
-            ListDbView.ItemsSource = poolDataItemPLC;
+             f = Enum.GetValues(typeof(DataType));
+           // CB_1.ItemsSource = f;        
         }
-        int c = 0;
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CB_1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ++c;
-            poolDataItemPLC.Add(new DataItemPLC("sd", "sds", CpuType.S71200, "123.123.2.123", 0, 0, 5, 254, DataType.DataBlock, VarType.Real));
-            //ListDbView.Items.Refresh();
+            
+            //TB_1.Text = ((int)((DataType)CB_1.SelectedItem)).ToString();
+           
         }
 
-        
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Creator Info", "info");
+        }
     }
+
+   
+    
 }

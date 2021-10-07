@@ -9,7 +9,6 @@ namespace Model.Model
 {
     public class DescriptionDataItem
     {
-        public string Name { get; set; }
         public string Text { get; set; }
         public CpuType CpuType { get; set; }
         public string IpAdress { get; set; }
@@ -27,9 +26,9 @@ namespace Model.Model
 
         }
 
-        public DescriptionDataItem(string Name, string Text, CpuType CpuType, string IpAdress, int Db, int StartByteAdr, short Rack, short Slot, DataType DataType, VarType VarTypePLC)
+        public DescriptionDataItem(string Text, CpuType CpuType, string IpAdress, int Db, int StartByteAdr, short Rack, short Slot, DataType DataType, VarType VarTypePLC)
         {
-            this.Name = Name;
+            
             this.Text = Text;
             this.CpuType = CpuType;
             this.IpAdress = IpAdress;

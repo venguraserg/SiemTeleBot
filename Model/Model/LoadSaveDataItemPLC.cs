@@ -12,7 +12,7 @@ namespace Model.Model
 {
     public static class LoadSaveDataItemPLC
     {
-        public static ObservableCollection<DataItemPLC> LoadDataItemPLC(string path)
+        public static List<DataItemPLC> LoadDataItemPLC(string path)
         {
             if (File.Exists(path) == false)
             {
@@ -22,24 +22,24 @@ namespace Model.Model
 
             if (isFileEmpty)
             {
-                return new ObservableCollection<DataItemPLC>();
+                return new List<DataItemPLC>();
             }
             
-            List<DescriptionDataItem> dataPoints = new List<DescriptionDataItem>();
+            
 
             string json = File.ReadAllText(path);
-            dataPoints = JsonConvert.DeserializeObject<List<DescriptionDataItem>>(json);
+            List<DescriptionDataItem>  dataPoints = JsonConvert.DeserializeObject<List<DescriptionDataItem>>(json);
 
-            ObservableCollection<DataItemPLC> plcDataItems = new ObservableCollection<DataItemPLC>();
+            List<DataItemPLC> plcDataItems = new List<DataItemPLC>();
 
             for (int i = 0; i < dataPoints.Count; i++)
             {
-                plcDataItems.Add(new DataItemPLC( dataPoints[i].Name, 
-                                                  dataPoints[i].Text, 
-                                                  dataPoints[i].CpuType, 
-                                                  dataPoints[i].IpAdress, 
-                                                  dataPoints[i].Rack, 
-                                                  dataPoints[i].Slot,
+                
+                plcDataItems.Add(new DataItemPLC( dataPoints[i].Text, 
+                                                  new Plc(dataPoints[i].CpuType, 
+                                                          dataPoints[i].IpAdress, 
+                                                          dataPoints[i].Rack, 
+                                                          dataPoints[i].Slot),
                                                   dataPoints[i].Db,
                                                   dataPoints[i].StartByteAdr,
                                                   dataPoints[i].DataType, 

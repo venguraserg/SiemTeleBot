@@ -9,7 +9,7 @@ namespace Model.Model
 {
     public class DataItemPLC 
     {
-        public string Name { get; set; }
+        
         public string Text { get; set; }
         public Plc Plc { get; set; }
 
@@ -25,11 +25,11 @@ namespace Model.Model
         
         }
 
-        public DataItemPLC(string name, string text, CpuType cpuType, string ipAdress, short rack, short slot, int db, int startByteAdress, DataType dataType, VarType varTypePLC)
+        public DataItemPLC(string text, Plc plc, int db, int startByteAdress, DataType dataType, VarType varTypePLC)
         {
-            Name = name;
+            
             Text = text;
-            Plc = new Plc(cpuType, ipAdress, rack, slot);
+            Plc = plc;
 
             Db = db;
             StartByteAdr = startByteAdress;

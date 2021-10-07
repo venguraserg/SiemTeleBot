@@ -5,27 +5,53 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SiemTeleBot_WPF"
         mc:Ignorable="d"
-        Title="SiemTeleBot" Height="450" Width="800">
-    <Grid Margin="0,0,0,0">
+        Title="SiemTeleBot" MinHeight="450" MinWidth="600">
+    <Grid Margin="0,0,0,0" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="181*" />
+            <RowDefinition Height="181*" />
+            <RowDefinition Height="181*" />
+            <RowDefinition Height="40*" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0" Grid.ColumnSpan="5" Margin="1,1,1,1">
+            <MenuItem Header="File" >
+                <MenuItem Header="Load config" />
+                <MenuItem Header="Save config" />
+            </MenuItem>
+            <MenuItem Header="Config" >
+                <MenuItem Header="PLC List"/>
+                <MenuItem Header="Request List"/>
+                <MenuItem Header="PLC List"/>
+            </MenuItem>
+            <MenuItem Header="?" HorizontalAlignment="Right" Click="MenuItem_Click"/>
+        </Menu>
+        <Border Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="3" Padding="5,5,5,5" >
+            <ListView >
+                <ListView.View>
+                    <GridView>
+                        <GridView.Columns  >
+                            <GridViewColumn Width="200" Header="Имя" DisplayMemberBinding="{Binding Path=ModelName}"></GridViewColumn>
+                            <GridViewColumn Header="Модель" DisplayMemberBinding="{Binding Path=ModelNumber}"></GridViewColumn>
+                            <GridViewColumn Header="Цена" DisplayMemberBinding="{Binding Path=UnitCost, StringFormat={}{0:C}}"></GridViewColumn>
+                        </GridView.Columns>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </Border>
+        
 
-        <Button Content="Button" HorizontalAlignment="Left" Margin="719,22,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-        <ListBox x:Name="ListDbView" 
-                 HorizontalAlignment="Left" 
-                 Height="329" Margin="35,0,0,0" 
-                 VerticalAlignment="Center" Width="704">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel>
-                        <TextBlock Text ="{Binding Name}"/>
 
 
-                    </StackPanel>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-
-
-
-        </ListBox>
 
 
     </Grid>
