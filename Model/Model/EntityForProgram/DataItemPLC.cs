@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Model.Model
+namespace Model.Model.EntityForProgram
 {
     public class DataItemPLC 
     {

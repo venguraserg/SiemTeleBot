@@ -1,4 +1,5 @@
 ﻿using Model.Model;
+using Model.Model.EntityForProgram;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,29 +10,29 @@ namespace SiemTeleBot
 {
     public static class ConsoleIO
     {
-        internal static bool Menu(List<DataItemPLC> dataItemPLCs, string path)
-        {
+        //internal static bool Menu(List<DataItemPLC> dataItemPLCs, string path)
+        //{
 
-            // Меню 
-            bool quit = false;
-            Console.Clear();
-            Console.WriteLine("1- Меню ПЛК");
-            switch (InputNumber())
-            {
-                case 1:
+        //    // Меню 
+        //    bool quit = false;
+        //    Console.Clear();
+        //    Console.WriteLine("1- Меню ПЛК");
+        //    switch (InputNumber())
+        //    {
+        //        case 1:
 
 
-                    break;
+        //            break;
 
-                case 9:
-                    quit = true;
-                    break;
+        //        case 9:
+        //            quit = true;
+        //            break;
 
-                default:
-                    break;
-            }
-            return !quit;
-        }
+        //        default:
+        //            break;
+        //    }
+        //    return !quit;
+        //}
 
         /// <summary>
         /// Метод ввода положительного числа

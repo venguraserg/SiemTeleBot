@@ -24,7 +24,7 @@ namespace SiemTeleBot_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        ObservableCollection<DataItemPLC> poolDataItemPLC = LoadSaveDataItemPLC.LoadDataItemPLC("123");
+        //ObservableCollection<DataItemPLC> poolDataItemPLC = LoadSaveDataMethos.LoadDataItemPLC("123");
         Array f;
         
 
