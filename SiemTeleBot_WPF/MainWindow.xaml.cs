@@ -24,7 +24,7 @@ namespace SiemTeleBot_WPF
     /// </summary>
     public partial class MainWindow : Window
     {
-        //ObservableCollection<DataItemPLC> poolDataItemPLC = LoadSaveDataMethos.LoadDataItemPLC("123");
+        MyDataBase db = new MyDataBase();
         Array f;
         
 
@@ -45,6 +45,18 @@ namespace SiemTeleBot_WPF
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Creator Info", "info");
+        }
+
+        private void MenuItem_OpenConfig(object sender, RoutedEventArgs e)
+        {
+           db =  LoadSaveDataMethos.GetDataFromFile("123");
+        }
+        int c = 0;
+       
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Title = $"{++c}";
         }
     }
 
