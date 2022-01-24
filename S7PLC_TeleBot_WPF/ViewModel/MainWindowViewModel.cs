@@ -5,11 +5,21 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using S7PLC_TeleBot_WPF.ViewModel.Base;
+
 
 namespace S7PLC_TeleBot_WPF.ViewModel
 {
-    public class MainWindowViewModel : INotifyPropertyChanged
+    public class MainWindowViewModel : ViewModelAbstract
     {
+        private string myVar;
+
+        public string MyProperty
+        {
+            get => myVar;
+            set => Set(ref myVar, value);
+        }
+
         public ObservableCollection<string> Collection { get; set; }
         public ObservableCollection<string> Collection1 { get; set; }
         public MainWindowViewModel()
@@ -29,6 +39,6 @@ namespace S7PLC_TeleBot_WPF.ViewModel
             Collection1.Add("1");
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        
     }
 }
