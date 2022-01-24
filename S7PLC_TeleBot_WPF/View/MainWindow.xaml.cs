@@ -12,17 +12,20 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using S7PLC_TeleBot_WPF;
+using S7PLC_TeleBot_WPF.ViewModel;
 
-namespace SiemTeleBot_WPF
+namespace S7PLC_TeleBot_WPF
 {
     /// <summary>
-    /// Логика взаимодействия для Page1.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class Page1 : Page
+    public partial class MainWindow : Window
     {
-        public Page1()
+        public MainWindow()
         {
             InitializeComponent();
+            //DataContext = new MainWindowViewModel();
         }
     }
 }

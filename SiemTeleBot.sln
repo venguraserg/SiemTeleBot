@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SiemTeleBot", "SiemTeleBot\SiemTeleBot.csproj", "{506EE19F-82EA-4B07-8D0C-CB269EED5EC7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F1FA352C-8A0D-41FD-B078-5FD0FFE5495A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Model", "Model\Model.csproj", "{79A6BED6-B841-4A94-AD60-9349C24C98BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsole", "TestConsole\TestConsole.csproj", "{470E6826-53D6-40C9-921C-2E115EFDA761}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SiemTeleBot_WPF", "SiemTeleBot_WPF\SiemTeleBot_WPF.csproj", "{4410634E-64BF-40F3-8574-B0D46D889209}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppTest", "WpfAppTest\WpfAppTest.csproj", "{B7FAD6FD-67D3-4320-8687-5E4267423453}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S7PLC_TeleBot_WPF", "S7PLC_TeleBot_WPF\S7PLC_TeleBot_WPF.csproj", "{193033B5-A644-475C-B1E3-B5A05C167893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,21 +17,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{506EE19F-82EA-4B07-8D0C-CB269EED5EC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{506EE19F-82EA-4B07-8D0C-CB269EED5EC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{506EE19F-82EA-4B07-8D0C-CB269EED5EC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{506EE19F-82EA-4B07-8D0C-CB269EED5EC7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{79A6BED6-B841-4A94-AD60-9349C24C98BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{79A6BED6-B841-4A94-AD60-9349C24C98BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{79A6BED6-B841-4A94-AD60-9349C24C98BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{79A6BED6-B841-4A94-AD60-9349C24C98BD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4410634E-64BF-40F3-8574-B0D46D889209}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4410634E-64BF-40F3-8574-B0D46D889209}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4410634E-64BF-40F3-8574-B0D46D889209}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4410634E-64BF-40F3-8574-B0D46D889209}.Release|Any CPU.Build.0 = Release|Any CPU
+		{470E6826-53D6-40C9-921C-2E115EFDA761}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{470E6826-53D6-40C9-921C-2E115EFDA761}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{470E6826-53D6-40C9-921C-2E115EFDA761}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{470E6826-53D6-40C9-921C-2E115EFDA761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7FAD6FD-67D3-4320-8687-5E4267423453}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7FAD6FD-67D3-4320-8687-5E4267423453}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7FAD6FD-67D3-4320-8687-5E4267423453}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7FAD6FD-67D3-4320-8687-5E4267423453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{193033B5-A644-475C-B1E3-B5A05C167893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{193033B5-A644-475C-B1E3-B5A05C167893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{193033B5-A644-475C-B1E3-B5A05C167893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{193033B5-A644-475C-B1E3-B5A05C167893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{470E6826-53D6-40C9-921C-2E115EFDA761} = {F1FA352C-8A0D-41FD-B078-5FD0FFE5495A}
+		{B7FAD6FD-67D3-4320-8687-5E4267423453} = {F1FA352C-8A0D-41FD-B078-5FD0FFE5495A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5E2E5066-5B3B-4C35-9F46-F65A2A42311E}
