@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31205.134
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{F1FA352C-8A0D-41FD-B078-5FD0FFE5495A}"
 EndProject
@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestConsole", "TestConsole\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfAppTest", "WpfAppTest\WpfAppTest.csproj", "{B7FAD6FD-67D3-4320-8687-5E4267423453}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S7PLC_TeleBot_WPF", "S7PLC_TeleBot_WPF\S7PLC_TeleBot_WPF.csproj", "{193033B5-A644-475C-B1E3-B5A05C167893}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "S7PLC_TeleBot_WPF", "S7PLC_TeleBot_WPF\S7PLC_TeleBot_WPF.csproj", "{193033B5-A644-475C-B1E3-B5A05C167893}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
