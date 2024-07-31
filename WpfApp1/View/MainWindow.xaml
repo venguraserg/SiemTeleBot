@@ -14,23 +14,20 @@
         <TabControl>
             <TabItem Header="TEST_TAB">
                 <StackPanel>
-                    <ListView x:Name="LV1" ItemsSource="{Binding Path=Reader.plc_list}">
+                    <ListView x:Name="LV1" ItemsSource="{Binding Path=Collection}">
 
                     </ListView>
-                    <!--
-                   <ListView ItemsSource="{Binding Path=Collection}">
+                    <ListView ItemsSource="{Binding Path=Collection1}">
 
                     </ListView>
-                    -->
-                    <!--
                     <TextBlock Text="{Binding Path=MyProperty, UpdateSourceTrigger=PropertyChanged}" />
                     <TextBox Text="{Binding Path=MyProperty,  UpdateSourceTrigger=PropertyChanged}"/>
                     <TextBlock Text="{Binding ElementName=LV1, Path=SelectedItem}" />
-                    -->
+                    
 
                 </StackPanel>
             </TabItem>
-           <!-- <TabItem Header="Периодическая передача в группу">
+            <TabItem Header="Периодическая передача в группу">
                 
             </TabItem>
             <TabItem Header="Работа с командами">
@@ -38,7 +35,7 @@
             </TabItem>
             <TabItem Header="Настройки">
 
-            </TabItem>-->
+            </TabItem>
 
         </TabControl>
         

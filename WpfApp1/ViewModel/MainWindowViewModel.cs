@@ -9,7 +9,7 @@ using S7PLC_TeleBot_WPF.ViewModel.Base;
 using Services;
 
 
-namespace S7PLC_TeleBot_WPF.ViewModel
+namespace WpfApp1.ViewModel
 {
     public class MainWindowViewModel : ViewModelAbstract
     {
@@ -21,18 +21,17 @@ namespace S7PLC_TeleBot_WPF.ViewModel
             set => Set(ref myVar, value);
         }
 
-        public PLC_Reader Reader { get;set; }
+        public PLC_Reader Reader;
         public ObservableCollection<string> Collection { get; set; }
         public ObservableCollection<string> Collection1 { get; set; }
         public MainWindowViewModel()
         {
-            Reader = new PLC_Reader();
             Collection = new ObservableCollection<string>();
-            Collection.Add(Reader.plc_list[0].IP_Adress.ToString());
-            Collection.Add(Reader.plc_list[1].IP_Adress.ToString());
-            Collection.Add(Reader.plc_list[2].IP_Adress.ToString());
-            Collection.Add(Reader.plc_list[3].IP_Adress.ToString());
-            Collection.Add(Reader.plc_list[4].IP_Adress.ToString());
+            Collection.Add("1");
+            Collection.Add("2");
+            Collection.Add("3");
+            Collection.Add("4");
+            Collection.Add("5");
 
             Collection1 = new ObservableCollection<string>();
             Collection1.Add("5");
