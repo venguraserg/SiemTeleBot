@@ -1,13 +1,6 @@
 ﻿using Models;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Services
 {
@@ -25,7 +18,7 @@ namespace Services
 
         public void AddPLC(string name, int typeCpu, string ipAdress)
         {
-            this.plc_list.Add(new PLC_str(name,typeCpu,ipAdress));
+            this.plc_list.Add(new PLC_str(name, typeCpu, ipAdress));
             JsonSerialize(this.plc_list, path);
         }
         public bool AddDataPoint(string ipAdress, string nanePoint, int dbNumber, int dbAdress, /*int dataType,*/ string text)
@@ -33,7 +26,7 @@ namespace Services
             var plc = this.plc_list.FirstOrDefault(e => e.IP_Adress == ipAdress);
             if (plc == null)
             {
-                return false; 
+                return false;
             }
 
             var index = plc_list.IndexOf(plc);
@@ -50,7 +43,7 @@ namespace Services
 
 
 
-            
+
             return "";
         }
 
@@ -80,12 +73,12 @@ namespace Services
         {
 
             string json = JsonConvert.SerializeObject(plcList);
-            
+
             if (File.Exists(path) == false)
             {
                 using (File.Create(path)) { };
             }
-            
+
             File.WriteAllText(path, json);
         }
 
@@ -98,7 +91,7 @@ namespace Services
         {
             if (File.Exists(path) == false)
             {
-                using (File.Create(path)) { };                
+                using (File.Create(path)) { };
             }
 
             string json = File.ReadAllText(path);
